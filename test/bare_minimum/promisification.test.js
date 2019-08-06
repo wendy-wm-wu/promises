@@ -78,9 +78,10 @@ describe('Promisification', function() {
   });
 
   describe('readFileAndMakeItFunnyAsync', function() {
+    console.log(promisificaion.readFileAndMakeItFunnyAsync);
     var readFileAndMakeItFunnyAsync = promisificaion.readFileAndMakeItFunnyAsync;
 
-    it('should return a promise', function() {
+    it.only('should return a promise', function() {
       // Must return a Bluebird promise. ES6 promise won't work here
       expect(readFileAndMakeItFunnyAsync(__dirname + '/../files/file_to_read.txt')).to.be.an.instanceOf(Promise);
     });
